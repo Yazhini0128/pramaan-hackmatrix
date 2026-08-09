@@ -7,8 +7,8 @@
 
 ## Team Leader
 **Name:** Nandika Yazhini A E
-**Email:** [YOUR EMAIL HERE]
-**Phone:** [YOUR PHONE NUMBER HERE]
+**Email:** [nandikayazhiniarunothyakumar@gmail.com]
+**Phone:** [9003313492]
 
 ## Event Name
 HackMatrix 2026 — Round 2
@@ -88,10 +88,9 @@ Pramaan turns any raw digital file into court-ready evidence in one click: it fi
 ---
 
 ## Platform Preview
-
-Pramaan opens with an animated boot-sequence splash screen, followed by a Secure Access Terminal login gate (matrix-style hex rain background, scanning HUD overlay), before revealing the dashboard. The interface uses a dark cyber-forensics identity — navy/black background, teal and amber accents, monospace type for hashes, glowing status indicators, and animated radial trust-score rings. See the demo video linked above for a full walkthrough.
-
+Pramaan opens with an animated boot-sequence splash screen, followed by a Secure Access Terminal login gate, before revealing the dashboard. Screenshots of the platform (Dashboard, Evidence Detail, Compliance Checklist, Chain of Custody, Judge View, and the Section 63 Certificate output) are available in this repo as 01-dashboard.png through 06-section63-certificate.png, and are also embedded directly in Pramaan_Project_Documentation.docx in this same folder.
 ---
+
 
 ## Future Scope
 
