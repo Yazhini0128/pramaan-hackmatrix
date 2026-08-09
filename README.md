@@ -12,7 +12,9 @@ Team Perihelion — HackMatrix Grand Finale (24-Hour Build)
 |---|---|
 | Nandika Yazhini A E | Team Leader |
 | Thanishka S | Team Member |
+## How We Built This
 
+Team Perihelion built Pramaan during the HackMatrix 24-hour build. [Nandika Yazhini] led the architecture, core hashing/chain-of-custody logic, and the React/Vite deployment. [Thanishka] worked on [pick what's true: testing the tamper simulator and hash-mismatch detection flows / EXIF metadata extraction and anomaly flagging / the presentation deck and problem-statement framing for judges / QA across the pre-seeded demo cases]. We split the work to move fast under the time limit — one of us focused on getting the cryptographic and forensic logic airtight, the other on making sure the platform actually made sense to a non-technical judge.
 ## Problem Statement
 
 Indian courts reject digital evidence in nearly 4 out of 10 cases — not because it's fake, but because investigators can't prove it wasn't altered. Missing cryptographic hashes, broken chains of custody, understaffed forensic labs, and missing Section 63 certificates (under the Bharatiya Sakshya Adhiniyam, 2023) cause strong cases to collapse on procedure rather than facts. Investigators today juggle disconnected tools, manual reporting, and legal paperwork — a slow, error-prone process that judges without technical training struggle to interpret.
