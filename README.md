@@ -4,7 +4,7 @@ Team Perihelion — HackMatrix Grand Finale (24-Hour Build)
 
 "From Collection to Court — Every Byte Verified."
 
-🌐 Live Demo: adorable-platypus-c56e82.netlify.app 🎥 Demo Video: Watch on Google Drive
+**🌐 Live Demo:** [adorable-platypus-c56e82.netlify.app](https://adorable-platypus-c56e82.netlify.app) **🎥 Demo Video:** [Watch on Google Drive](https://drive.google.com/file/d/11K5P13aXcjwap3AP-X6ZHHpx22NtEIjY/view?usp=drivesdk) 
 
 ## Team
 
