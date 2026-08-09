@@ -28,7 +28,7 @@ HackMatrix 2026 — Round 2
 
 ---
 
-## Your Problem Statement
+## Problem Statement
 
 Indian courts reject digital evidence in nearly 4 out of 10 cases — not because it's fake, but because investigators can't prove it wasn't altered. Missing cryptographic hashes, broken chains of custody, understaffed forensic labs, and missing Section 63 certificates (under the Bharatiya Sakshya Adhiniyam, 2023) cause strong cases to collapse on procedure rather than facts. Investigators today juggle disconnected tools, manual reporting, and legal paperwork — a slow, error-prone process that judges without technical training struggle to interpret.
 
@@ -86,9 +86,29 @@ Pramaan turns any raw digital file into court-ready evidence in one click: it fi
 - **Deployment:** Netlify
 
 ---
-
 ## Platform Preview
-Pramaan opens with an animated boot-sequence splash screen, followed by a Secure Access Terminal login gate, before revealing the dashboard. Screenshots of the platform (Dashboard, Evidence Detail, Compliance Checklist, Chain of Custody, Judge View, and the Section 63 Certificate output) are available in this repo as 01-dashboard.png through 06-section63-certificate.png, and are also embedded directly in Pramaan_Project_Documentation.docx in this same folder.
+
+Pramaan opens with an animated boot-sequence splash screen, followed by a Secure Access Terminal login gate, before revealing the dashboard.
+
+![Dashboard](screenshots/01-dashboard.png)
+*Multi-agency dashboard — cases scoped by police unit, with trust scores at a glance*
+
+![Evidence Detail](screenshots/02-evidence-detail.png)
+*Evidence detail view — hash, metadata, and trust score for a single item*
+
+![Legal Compliance Checklist](screenshots/03-compliance-checklist.png)
+*8-point Legal Compliance Checklist scoring procedural readiness*
+
+![Chain of Custody](screenshots/04-chain-of-custody.png)
+*Hash-linked chain of custody — every action cryptographically tied to the last*
+
+![Judge View](screenshots/05-judge-view.png)
+*Judge View — plain-English explanation for non-technical review*
+
+![Section 63 Certificate](screenshots/06-section63-certificate.png)
+*Generated Section 63 certificate — case, hash, examiner, and legal statement pre-filled*
+
+These screenshots are also embedded in `Pramaan_Project_Documentation.docx` in this same folder.
 ---
 
 
