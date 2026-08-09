@@ -12,9 +12,11 @@ Team Perihelion — HackMatrix Grand Finale (24-Hour Build)
 |---|---|
 | Nandika Yazhini A E | Team Leader |
 | Thanishka S | Team Member |
+
 ## How We Built This
 
-Team Perihelion built Pramaan during the HackMatrix 24-hour build. [Nandika Yazhini] led the architecture, core hashing/chain-of-custody logic, and the React/Vite deployment. [Thanishka] worked on [pick what's true: testing the tamper simulator and hash-mismatch detection flows / EXIF metadata extraction and anomaly flagging / the presentation deck and problem-statement framing for judges / QA across the pre-seeded demo cases]. We split the work to move fast under the time limit — one of us focused on getting the cryptographic and forensic logic airtight, the other on making sure the platform actually made sense to a non-technical judge.
+Team Perihelion built Pramaan during the HackMatrix 24-hour build. Nandika Yazhini led the architecture, core hashing/chain-of-custody logic, and the platform's overall build and deployment. Thanishka focused on the presentation deck and framing the problem statement for judges. We split the work to move fast under the time limit — one of us focused on getting the cryptographic and forensic logic airtight, the other on making sure the platform actually made sense to a non-technical judge.
+
 ## Problem Statement
 
 Indian courts reject digital evidence in nearly 4 out of 10 cases — not because it's fake, but because investigators can't prove it wasn't altered. Missing cryptographic hashes, broken chains of custody, understaffed forensic labs, and missing Section 63 certificates (under the Bharatiya Sakshya Adhiniyam, 2023) cause strong cases to collapse on procedure rather than facts. Investigators today juggle disconnected tools, manual reporting, and legal paperwork — a slow, error-prone process that judges without technical training struggle to interpret.
@@ -54,6 +56,12 @@ Each custody event is stored as a **block**: `hash = SHA256(previousBlockHash + 
 - Blocks are cryptographically linked in sequence, exactly like a blockchain.
 - If any historical entry is altered, its recomputed hash no longer matches what's stored, and every subsequent block becomes provably invalid.
 - No external blockchain network, gas fees, or wallet is required — the tamper-evidence property comes from the hash chaining itself, which is the actual security property investigators need, without the deployment complexity a real distributed ledger would add in a 24-hour build.
+
+## System Architecture
+
+![Pramaan Architecture](screenshots/architecture-diagram.png)
+
+The pipeline runs entirely client-side: a file is hashed via the Web Crypto API, its EXIF metadata is analyzed, anomalies are flagged, and a weighted trust score is computed. Every action is recorded as a hash-linked block in the chain of custody, feeding into the Legal Readiness checklist, the Section 63 certificate generator, the live tamper simulator, and the plain-English Judge View.
 
 ## Reliability Note (why there's no browser storage)
 
@@ -121,10 +129,16 @@ No installation, dependencies, or build step required.
 
 ## Repository Contents
 
-| File | Purpose |
+| File / Folder | Purpose |
 |---|---|
-| `index.html` | The full working prototype — open this file or visit the live deployed link |
+| `index.html` | Page structure, boot sequence, login gate |
+| `styles.css` | Dark cyber-forensics theme and layout |
+| `script.js` | Core application logic — hashing, chain of custody, scoring, EXIF, PDF generation |
+| `screenshots/` | App screenshots for quick visual reference |
+| `PROJECT_DOCUMENTATION.md` / `Pramaan_Project_Documentation.docx` | Extended written documentation |
 | `README.md` | This file |
+
+(index.html, styles.css, and script.js must stay in the same folder — they're linked together.)
 
 ## Next Steps (post-hackathon roadmap)
 
