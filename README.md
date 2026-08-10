@@ -59,7 +59,7 @@ Each custody event is stored as a **block**: `hash = SHA256(previousBlockHash + 
 
 ## System Architecture
 
-![Pramaan Architecture](screenshots/architecture-diagram.png)
+![Pramaan Architecture](docs/screenshots/architecture-diagram.png)
 
 The pipeline runs entirely client-side: a file is hashed via the Web Crypto API, its EXIF metadata is analyzed, anomalies are flagged, and a weighted trust score is computed. Every action is recorded as a hash-linked block in the chain of custody, feeding into the Legal Readiness checklist, the Section 63 certificate generator, the live tamper simulator, and the plain-English Judge View.
 
@@ -106,8 +106,8 @@ No installation, dependencies, or build step required.
    git clone https://github.com/<your-username>/<repo-name>.git
    cd <repo-name>
    ```
-2. Open `index.html` directly in any modern browser (Chrome, Edge, or Firefox) — that's it. Everything (hashing, EXIF parsing, PDF generation) runs client-side; only three CDN-hosted libraries (jsPDF, exif-js, Google Fonts) load over the network, so an internet connection is needed on first load.
-3. To deploy it as a live site: drag `index.html` into [Netlify Drop](https://app.netlify.com/drop) for an instant public URL, or enable **GitHub Pages** on this repo (Settings → Pages → Source: `main` branch, root folder).
+2. Open `src/index.html` directly in any modern browser (Chrome, Edge, or Firefox) — that's it. Everything (hashing, EXIF parsing, PDF generation) runs client-side; only three CDN-hosted libraries (jsPDF, exif-js, Google Fonts) load over the network, so an internet connection is needed on first load.
+3. To deploy it as a live site: drag `src/index.html` (along with `styles.css` and `script.js` from the same folder) into [Netlify Drop](https://app.netlify.com/drop) for an instant public URL, or enable **GitHub Pages** on this repo (Settings → Pages → Source: `main` branch, `/src` folder).
 
 ## Demo Script (for the 2–3 minute walkthrough video)
 
@@ -131,14 +131,15 @@ No installation, dependencies, or build step required.
 
 | File / Folder | Purpose |
 |---|---|
-| `index.html` | Page structure, boot sequence, login gate |
-| `styles.css` | Dark cyber-forensics theme and layout |
-| `script.js` | Core application logic — hashing, chain of custody, scoring, EXIF, PDF generation |
-| `screenshots/` | App screenshots for quick visual reference |
-| `PROJECT_DOCUMENTATION.md` / `Pramaan_Project_Documentation.docx` | Extended written documentation |
+| `src/index.html` | Page structure, boot sequence, login gate |
+| `src/styles.css` | Dark cyber-forensics theme and layout |
+| `src/script.js` | Core application logic — hashing, chain of custody, scoring, EXIF, PDF generation |
+| `docs/screenshots/` | App screenshots for quick visual reference |
+| `docs/PROJECT_DOCUMENTATION.md` / `docs/Pramaan_Project_Documentation.docx` | Extended written documentation |
+| `docs/Pramaan_HackMatrix_Final.pptx` | Presentation deck |
 | `README.md` | This file |
 
-(index.html, styles.css, and script.js must stay in the same folder — they're linked together.)
+(`index.html`, `styles.css`, and `script.js` must stay together in `src/` — they're linked to each other by relative path.)
 
 ## Next Steps (post-hackathon roadmap)
 
